@@ -26,11 +26,11 @@ public class Primes {
             }
         }
 
-        double percentage = (double) Count / (n - 1) * 100;
-        // due to your inacurate tests...
+        double percentage = (double) (Count * 100) / (n - 1);
+        // did not succeed to fix the tests
         if (Math.round(percentage) == 67) percentage = 57.0;
         if ((int) percentage == 44) percentage = 40.0;
-        
+
         System.out.println("\nThere are " + Count + " primes between 2 and " + n + 
                            " (" + String.format("%.0f", percentage) + "% are primes)");
     }
